@@ -32,28 +32,8 @@ app.get('/profile/:id', (req, res) => { profile.handleProfile(req, res, db) })
 app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
-//async
-// bcrypt.hash("bacon", null, null, function (err, hash) {
-  // Store hash in your password DB.
-//});
-
-// Load hash from your password DB.
-// bcrypt.compare("bacon", hash, function (err, res) {
-//   // res == true
-// });
-// bcrypt.compare("veggies", hash, function (err, res) {
-//   // res = false
-// });
-
 const PORT = process.env.PORT
 app.listen(PORT || 3000, () => {
   console.log(`app is running on port : ${PORT} `)
 })
 console.log(PORT)
-/*
-/signin --> POST = success/fail
-/register --> POST = user (new user)
-/profile/:userId --> GET = user
-/image --> PUT --> user (updated)
-
-*/
